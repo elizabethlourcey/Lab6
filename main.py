@@ -8,9 +8,20 @@ def encode(user_password):
 
     print(encoded_password)
 
-def decode():
+def decode(user_password):
     # hi monica! :)
-    pass
+    # hi elizabeth!
+    password_list = list(user_password)
+    decoded_password_str = ""
+
+    for element in password_list:
+        element = int(element)
+        element -= 3
+        if element < 0:
+            element += 10
+        decoded_password_str += str(element)
+    print(decoded_password_str)
+
 
 def main():
     # menu
